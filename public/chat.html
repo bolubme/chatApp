@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/chat.css" />
+</head>
+
+<body>
+  <div class="loader"></div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="create-group-form">
+      <form id="createGroupChatForm">
+        <span class="close">&times;</span>
+        <h3>Create Group</h3>
+
+        <label for="groupname">Groupname</label>
+        <input type="text" placeholder="Group name" id="groupName">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <button id="create-group-button" type="submit">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- start: Groups -->
+        <div class="box">
+          <div class="chat-room">
+            <!-- start:aside Group -->
+            <aside class="kiri-side">
+              <div class="user-head">
+                <i class="fa fa-comments-o"></i>
+                <h3>Bolu<span>Chat</span></h3>
+              </div>
+              <div class="group-add-btn">
+                <button id="myBtn" class="group-add-btn">
+                  Create Group
+                </button>
+              </div>
+              <div class="group-header">
+                <a class="lobby">
+                  <h4>
+                    <i class="fa fa-list"></i>
+                    Groups
+                  </h4>
+                </a>
+              </div>
+              <ul id="groupList" class="chat-list">
+                <!-- <li class="active">
+                  <a>
+                    <i class="fa fa-users"></i>
+                    <span id="current-group-header">Hello</span>
+                    <i class="fa fa-times pull-right"></i>
+                  </a>
+                </li> -->
+              </ul>
+              <footer>
+                <a class="chat-avatar" href="profile.html">
+                  <img alt="" src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                </a>
+                <div class="user-status">
+                  <i class="fa fa-circle text-success"></i>
+                  Available
+                </div>
+              </footer>
+            </aside>
+            <!-- end:aside Group -->
+            <div class="chat-container"></div>
+            <!-- start:aside Chat Message -->
+            <aside class="tengah-side">
+              <div class="chat-room-head"></div>
+              <div class="room-desk">
+                <h4 class="pull-left" id="current-group-header">Hello Welcome to BoluChat</h4>
+                <div class="chat">
+                  <div  class="chat-history">
+                    <ul id="message-list" class="m-b-0">
+                    </ul>
+                  </div>
+                  <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-send"></i></span>
+                        <button class="send-button" >Send</button>
+                      </div>
+                      <input type="text" id="message-input" class="form-control" placeholder="Enter text here...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <!-- end:aside Chat Message -->
+            <!-- start:aside Active user -->
+            <aside class="kanan-side">
+              <div class="user-head">
+                <button class="pull-right btn-create-group" id="leave-button">Exit Chat</button>
+
+              </div>
+              <div class="invite-row">
+                <h4 class="pull-left ">People</h4>
+              </div>
+              <ul class="chat-available-user">
+                <!-- <li>
+                  <i class="fa fa-circle text-success"></i>
+                  Jonathan Smith
+                </li> -->
+              </ul>
+            </aside>
+            <!-- end:aside Active user -->
+          </div>
+        </div>
+      </div>
+      <!-- end:lobby -->
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script> -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chat.js"></script>
+
+  <!-- Bootstrap JavaScript (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Get the modal
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementById("myBtn");
+    let span = document.getElementsByClassName("close")[0];
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+

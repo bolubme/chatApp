@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/login.css" />
+    <style>
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sticky">
+      <div class="container">
+        <nav class="nav d-flex">
+          <a href="\" class="logo">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="box-form">
+      <div class="left">
+        <img src="assets/images/helllo.svg" alt="" />
+      </div>
+
+      <div class="right">
+        <h5>Welcome</h5>
+        <p>
+          Don't have an account?
+          <a href="register">Creat Your Account</a> it takes less than a
+          minute
+        </p>
+        <div class="message" id="message"></div>
+        <div class="inputs">
+          <form id="login">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <br>
+            <input type="password" id="login-password" placeholder="Password"  required>
+            <br>
+            <input class="btn" type="submit" value="Login">
+        </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

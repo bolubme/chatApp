@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register Page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <header class="sticky">
+      <div class="container">
+        <nav class="nav d-flex">
+          <a href="\" class="logo">
+            <img src="assets/images/logo.svg" alt="logo" />
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div class="box-form">
+      <div class="left">
+        <img src="assets/images/helllo.svg" alt="image" />
+      </div>
+      <div class="right">
+        <h5>Register</h5>
+        <p>
+          You have an account? <a href="login">Login</a> and start enjoying
+          the best of BoluChat
+        </p>
+        <div class="message" id="message"></div>
+        <div class="inputs">
+          <form id="register">
+            <input
+              type="text"
+              id="register-username"
+              placeholder="User name"
+              required
+            />
+            <br />
+            <input
+              type="text"
+              id="register-fullname"
+              placeholder="Full name"
+              required
+            />
+            <br />
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Email"
+              required
+            />
+            <br />
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Password"
+              required
+            />
+            <br />
+            <input
+              type="password"
+              id="register-confirm-password"
+              placeholder="Confirm password"
+              required
+            />
+            <br />
+            <input class="btn" type="submit" value="Register" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>
